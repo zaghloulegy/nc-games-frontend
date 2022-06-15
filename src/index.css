@@ -1,10 +1,10 @@
 :root {
-  __darkest: #000814;
-  __dark-blue: #001d3d;
-  __blue: #003566;
-  __light-blue: #0054a3;
-  __yellow: #ffe97b;
-  __white: #ffffff;
+  --darkest: #000814;
+  --dark-blue: #001d3d;
+  --blue: #003566;
+  --light-blue: #0054a3;
+  --yellow: #ffe97b;
+  --white: #ffffff;
 }
 * {
   margin: 0;

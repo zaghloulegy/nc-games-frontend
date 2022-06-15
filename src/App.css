@@ -71,6 +71,8 @@ form button {
   background-color: rgb(37, 132, 139);
   border-radius: 0.5rem;
   cursor: pointer;
+  color: white;
+  font-weight: bold;
 }
 .searchbar__categories {
   grid-area: categories;
