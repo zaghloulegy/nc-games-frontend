@@ -1,5 +1,5 @@
 import { React, useContext, useState } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { UserContext } from "../contexts/UserContext";
 import { fetchUser } from "../utils/api";
 
@@ -44,7 +44,6 @@ export default function LogIn() {
         {isError && (
           <div className="error">
             <p>User does not exist.</p>
-            <Link to="/register">Register instead.</Link>
           </div>
         )}
       </div>

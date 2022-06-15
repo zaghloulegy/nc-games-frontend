@@ -7,7 +7,6 @@ import {
   fetchComments,
   patchVote,
 } from "../utils/api";
-import { convertDate } from "../utils/utilFuncs";
 
 export default function CommentSection({
   setNewComment,
@@ -80,7 +79,6 @@ export default function CommentSection({
         {!username ? (
           <p>
             Please <Link to="/login">login</Link> or{" "}
-            <Link to="/register">register</Link> to leave a comment.
           </p>
         ) : (
           <form onSubmit={handleSubmit}>
@@ -122,11 +120,10 @@ export default function CommentSection({
         ) : (
           displayComments.length > 0 &&
           displayComments.map((comment) => {
-            const { comment_id, author, created_at, body, votes } = comment;
+            const { comment_id, author, body, votes } = comment;
             return (
               <div key={comment_id} className="comments__card">
                 <h4>{author}</h4>
-                <p>{convertDate(created_at)}</p>
                 <p>{body}</p>
                 <button
                   onClick={() => {

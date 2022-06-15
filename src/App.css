@@ -103,7 +103,9 @@ h2 {
   padding: 1rem;
   margin-top: 1rem;
   margin-bottom: 1rem;
-  box-shadow: 0.05rem 0.1rem 0.3rem -0.03rem rgba(0, 0, 0, 0.45);
+  box-shadow: 0.05rem 0.1rem 0.3rem -0.03rem rgba(0, 0, 0, 0.9);
+  border-radius: 0.5rem;
+  background-color: rgb(201, 140, 140);
 }
 
 .reviews__reviewcard h3,
@@ -243,7 +245,7 @@ h3:hover {
 }
 
 footer {
-  background-color: var(__blue);
+  background-color: rgb(139, 37, 37);
   padding-top: 1rem;
   padding-bottom: 1rem;
   margin-top: auto;
@@ -255,7 +257,7 @@ footer {
 }
 
 footer a {
-  color: whitesmoke;
+  color: rgb(245, 245, 245);
 }
 
 @media (min-width: 414px) {

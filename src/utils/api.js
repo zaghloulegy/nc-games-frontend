@@ -1,24 +1,24 @@
 import axios from "axios";
 
-const myApi = axios.create({
+const gameApi = axios.create({
   baseURL: "https://ncgame.herokuapp.com/api",
 });
 
 export const fetchTopReviews = () => {
-  return myApi.get("/reviews?sort_by=votes&order=desc").then(({ data }) => {
+  return gameApi.get("/reviews?sort_by=votes&order=desc").then(({ data }) => {
     return data.reviews.slice(0, 5);
   });
 };
 
 export const fetchCategories = () => {
-  return myApi.get("/categories").then(({ data }) => {
+  return gameApi.get("/categories").then(({ data }) => {
     return data.categories.map((category) => category.slug).sort();
   });
 };
 
 export const fetchReviews = (category, criteria, page) => {
   const { sort_by, order } = criteria;
-  return myApi
+  return gameApi
     .get(
       `/reviews${
         category === "all-categories" ? "?" : `?category=${category}&`
@@ -32,23 +32,23 @@ export const fetchReviews = (category, criteria, page) => {
 };
 
 export const fetchUser = (username) => {
-  return myApi.get(`/users/${username}`).then(({ data }) => {
+  return gameApi.get(`/users/${username}`).then(({ data }) => {
     return data.user;
   });
 };
 
 export const fetchReview = (id) => {
-  return myApi.get(`/reviews/${id}`).then(({ data: { review } }) => {
+  return gameApi.get(`/reviews/${id}`).then(({ data: { review } }) => {
     return review;
   });
 };
 
 export const patchVote = (id, type) => {
-  return myApi.patch(`/${type}/${id}`, { inc_votes: 1 });
+  return gameApi.patch(`/${type}/${id}`, { inc_votes: 1 });
 };
 
 export const postComment = (id, comment, username) => {
-  return myApi.post(`/reviews/${id}/comments`, {
+  return gameApi.post(`/reviews/${id}/comments`, {
     username,
     body: comment,
   });
@@ -56,7 +56,7 @@ export const postComment = (id, comment, username) => {
 
 export const fetchComments = (id, criteria) => {
   const { sort_by, order } = criteria;
-  return myApi
+  return gameApi
     .get(`/reviews/${id}/comments?sort_by=${sort_by}&order=${order}`)
     .then(({ data: { comments } }) => {
       return comments;
@@ -64,17 +64,11 @@ export const fetchComments = (id, criteria) => {
 };
 
 export const deleteComment = (id) => {
-  return myApi.delete(`/comments/${id}`);
+  return gameApi.delete(`/comments/${id}`);
 };
 
 export const postUser = (username, fullName) => {
-  return myApi.post("/users/", { username, name: fullName });
+  return gameApi.post("/users", { username, name: fullName });
 };
 
-export const fetchCommentsByUser = (username) => {
-  return myApi
-    .get(`/comments/user/${username}`)
-    .then(({ data: { comments } }) => {
-      return comments;
-    });
-};
+

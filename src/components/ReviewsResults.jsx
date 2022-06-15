@@ -4,8 +4,6 @@ import { QueryContext } from "../contexts/QueryContext";
 import { fetchReviews } from "../utils/api";
 import { capitalizeString } from "../utils/utilFuncs";
 import ErrorComponent from "./ErrorComponent";
-
-// Component Imports
 import ReviewCard from "./ReviewCard";
 
 export default function ReviewsResults() {

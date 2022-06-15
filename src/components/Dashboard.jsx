@@ -1,8 +1,8 @@
 import { React, useContext, useEffect, useState } from "react";
-import { useParams, Link } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import { UserContext } from "../contexts/UserContext";
-import { fetchUser, fetchCommentsByUser } from "../utils/api";
-import { getFirstName, convertDate } from "../utils/utilFuncs";
+import { fetchUser} from "../utils/api";
+import { getFirstName } from "../utils/utilFuncs";
 
 export default function Dashboard() {
   const {
@@ -11,17 +11,19 @@ export default function Dashboard() {
     setCurrentUser,
   } = useContext(UserContext);
   const [isLoading, setIsLoading] = useState(true);
+  // eslint-disable-next-line
   const [userComments, setUserComments] = useState([]);
   const { username } = useParams();
+
   useEffect(() => {
     setIsLoading(true);
-    return Promise.all([fetchUser(username), fetchCommentsByUser(username)])
+    Promise.all([fetchUser(username)])
       .then(([user, userComments]) => {
         setIsLoading(false);
         setUserComments(userComments);
         setCurrentUser(user);
       })
-      .catch(console.log);
+      .catch(Error);
   }, [setCurrentUser, username]);
 
   return (
@@ -31,34 +33,8 @@ export default function Dashboard() {
           <h2>Hello, {getFirstName(name)}!</h2>
           <div>
             <h3>Account</h3>
-            <img src={avatar_url} alt="user avatar" width="50%" />
+            <img src={avatar_url} alt="user avatar" width="10%" />
             <p>Username: {currentUser.username}</p>
-          </div>
-          <div>
-            <h3>Your Comments</h3>
-            {isLoading ? (
-              <p>Loading...</p>
-            ) : userComments.length <= 0 ? (
-              <p>You haven't posted any comments.</p>
-            ) : (
-              <div>
-                {userComments.map((comment) => {
-                  const { comment_id, review_id, created_at, body, votes } =
-                    comment;
-                  return (
-                    <div key={comment_id}>
-                      <Link to={`/review/${review_id}`}>
-                        <p>{convertDate(created_at)}</p>
-                      </Link>
-                      <p>{body}</p>
-                      <p>
-                        {votes} {votes <= 1 ? "Like" : "Likes"}
-                      </p>
-                    </div>
-                  );
-                })}
-              </div>
-            )}
           </div>
         </div>
       )}

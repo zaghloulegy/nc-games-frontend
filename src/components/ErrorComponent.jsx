@@ -2,7 +2,6 @@ import { React } from "react";
 
 export default function ErrorComponent({ err }) {
   const [code, message] = err;
-  console.log(err);
   return (
     <div>
       <h2>

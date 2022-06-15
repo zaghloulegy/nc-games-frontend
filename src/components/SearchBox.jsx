@@ -20,7 +20,7 @@ export default function SearchBox() {
         setCategories(res);
         setIsLoading(false);
       })
-      .catch(console.log);
+      .catch(Error);
   }, []);
 
   const handleCategory = (event) => {

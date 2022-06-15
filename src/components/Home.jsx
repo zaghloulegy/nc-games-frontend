@@ -12,7 +12,7 @@ export default function Home() {
         setIsLoading(false);
         setDisplayedReviews(res);
       })
-      .catch(console.log);
+      .catch(Error);
   }, []);
   return (
     <div>

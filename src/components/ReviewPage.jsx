@@ -3,7 +3,6 @@ import { useParams } from "react-router-dom";
 import CommentSection from "./CommentSection";
 import ErrorComponent from "./ErrorComponent";
 import { fetchReview, patchVote } from "../utils/api";
-import { convertDate } from "../utils/utilFuncs";
 import { UserContext } from "../contexts/UserContext";
 
 export default function ReviewPage() {
@@ -36,8 +35,6 @@ export default function ReviewPage() {
     title,
     review_body: body,
     review_img_url: img,
-    owner,
-    created_at: date,
     votes,
   } = review;
 
@@ -64,7 +61,6 @@ export default function ReviewPage() {
             <img src={img} alt=" game review" />
             <h2>{title}</h2>
             <p>
-              by {owner} on {convertDate(date)}
             </p>
             <h3>Review</h3>
             <p>{body}</p>
