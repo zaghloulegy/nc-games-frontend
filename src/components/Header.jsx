@@ -25,20 +25,20 @@ export default function Header() {
       <Link to="/">
         <div className="header">
           <img
-            className="header--logo"
+            className="header__logo"
             src={northercoders}
             alt="northercoders logo"
           />
-          <h1 className="header--title">Zaghloul`s Game</h1>
+          <h1 className="header__title">Zaghloul`s Game</h1>
         </div>
       </Link>
       <div>
         {username ? (
-          <ul className="header--nav">
+          <ul className="header__nav">
             <li>
               <Link to="/">Home</Link>
             </li>
-            
+
             <li>
               <Link to={`/dashboard/${username}`}>
                 Dashboard ({getFirstName(name)})
@@ -51,11 +51,11 @@ export default function Header() {
             </li>
           </ul>
         ) : (
-          <ul className="header--nav">
+          <ul className="header__nav">
             <li>
               <Link to="/">Home</Link>
             </li>
-          
+
             <li>
               <Link to="/login">Login</Link>
             </li>

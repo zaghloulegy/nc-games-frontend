@@ -2,7 +2,7 @@ import { React, useState, useEffect, useContext } from "react";
 import { useParams } from "react-router-dom";
 import { QueryContext } from "../contexts/QueryContext";
 import { fetchReviews } from "../utils/api";
-import { capitaliseString } from "../utils/utilFuncs";
+import { capitalizeString } from "../utils/utilFuncs";
 import ErrorComponent from "./ErrorComponent";
 
 // Component Imports
@@ -18,7 +18,6 @@ export default function ReviewsResults() {
   const { category } = useParams();
   const [error, setError] = useState(null);
 
-  
   useEffect(() => {
     setError(null);
     fetchReviews(category, criteria, page)
@@ -59,11 +58,11 @@ export default function ReviewsResults() {
         <ErrorComponent err={error} />
       ) : (
         <div>
-          <h2>{capitaliseString(category)}</h2>
+          <h2>{capitalizeString(category)}</h2>
           <div className="reviews">
             <ReviewCard displayedReviews={displayedReviews} />
           </div>
-          <div className="reviews--pagination">
+          <div className="reviews__pagination">
             <button onClick={handlePrevious} disabled={page === 1}>
               <span>&#8249;</span>
             </button>

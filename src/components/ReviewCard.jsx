@@ -21,23 +21,18 @@ export default function ReviewCard({ displayedReviews }) {
               comment_count,
             }) => {
               return (
-                <div className="reviews--reviewcard" key={review_id}>
+                <div className="reviews__reviewcard" key={review_id}>
                   <Link to={`/review/${review_id}`}>
-                    <img
-                      src={review_img_url}
-                      alt="game review"
-                      width="100%"
-                    />
+                    <img src={review_img_url} alt="game review" width="100%" />
                     <h3>{title}</h3>
                   </Link>
                   <p>
                     by {owner} on {convertDate(date)}
                   </p>
                   <p>
-                    
                     <Link to={`/review/${review_id}`}>Read More</Link>
                   </p>
-                  <p className="reviews--stats">
+                  <p className="reviews__stats">
                     {votes} {votes <= 1 ? "Vote" : "Votes"} | {comment_count}{" "}
                     {comment_count <= 1 ? "Comment" : "Comments"}
                   </p>

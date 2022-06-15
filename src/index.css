@@ -1,12 +1,12 @@
 :root {
-  --darkest: #000814;
-  --dark-blue: #001d3d;
-  --blue: #003566;
-  --light-blue: #0054a3;
-  --yellow: #ffe97b;
-  --white: #ffffff;
+  __darkest: #000814;
+  __dark-blue: #001d3d;
+  __blue: #003566;
+  __light-blue: #0054a3;
+  __yellow: #ffe97b;
+  __white: #ffffff;
 }
-*{
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -23,7 +23,7 @@ body {
 }
 
 * {
-  font-family: var(--main-font);
+  font-family: var(__main-font);
   font-weight: 400;
 }
 
@@ -35,7 +35,7 @@ h3 {
 
 a {
   text-decoration: none;
-  color: var(--light-blue);
+  color: var(__light-blue);
 }
 
 a:hover,

@@ -76,7 +76,7 @@ export default function CommentSection({
   return (
     <div>
       <h3>Leave a Comment</h3>
-      <div className="comments--input">
+      <div className="comments__input">
         {!username ? (
           <p>
             Please <Link to="/login">login</Link> or{" "}
@@ -96,9 +96,8 @@ export default function CommentSection({
         )}
       </div>
 
-      {/* --------------- COMMENTS BLOCK --------------- */}
       <div>
-        <div className="comments--header">
+        <div className="comments__header">
           <h3>
             {displayComments.length > 1 ? "Comments" : "Comment"} (
             {displayComments.length})
@@ -125,7 +124,7 @@ export default function CommentSection({
           displayComments.map((comment) => {
             const { comment_id, author, created_at, body, votes } = comment;
             return (
-              <div key={comment_id} className="comments--card">
+              <div key={comment_id} className="comments__card">
                 <h4>{author}</h4>
                 <p>{convertDate(created_at)}</p>
                 <p>{body}</p>

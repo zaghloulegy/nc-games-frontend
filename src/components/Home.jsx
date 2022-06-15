@@ -16,7 +16,7 @@ export default function Home() {
   }, []);
   return (
     <div>
-      <h2 className="header--center">Popular Reviews ⬆️</h2>
+      <h2 className="header__center">Popular Reviews ⬆️</h2>
       {isLoading ? (
         <p>Loading...</p>
       ) : (

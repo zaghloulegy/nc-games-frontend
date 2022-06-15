@@ -1,7 +1,7 @@
 import { React, useState, useEffect, useContext } from "react";
 import { useNavigate } from "react-router-dom";
 import { fetchCategories } from "../utils/api";
-import { capitaliseString } from "../utils/utilFuncs";
+import { capitalizeString } from "../utils/utilFuncs";
 import { QueryContext } from "../contexts/QueryContext";
 
 export default function SearchBox() {
@@ -54,7 +54,7 @@ export default function SearchBox() {
           <select
             name="categories"
             onChange={handleCategory}
-            className="searchbar--categories"
+            className="searchbar__categories"
           >
             <option value="all-categories" defaultValue>
               All Categories
@@ -62,7 +62,7 @@ export default function SearchBox() {
             {categories.map((category) => {
               return (
                 <option value={category} key={category}>
-                  {capitaliseString(category)}
+                  {capitalizeString(category)}
                 </option>
               );
             })}
@@ -70,7 +70,7 @@ export default function SearchBox() {
           <select
             name="criteria"
             onChange={handleCriteria}
-            className="searchbar--sort"
+            className="searchbar__sort"
           >
             <option value='{ "sort_by": "title", "order": "asc" }' defaultValue>
               Sort By Title
@@ -94,7 +94,7 @@ export default function SearchBox() {
               Votes: Low to High
             </option>
           </select>
-          <button className="searchbar--button">🔍</button>
+          <button className="searchbar__button">Search</button>
         </form>
       )}
     </div>

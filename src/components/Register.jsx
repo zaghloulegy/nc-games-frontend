@@ -35,7 +35,7 @@ export default function Register() {
   };
 
   return (
-    <div className="login--container">
+    <div className="login__container">
       <div className="login">
         <h2>Register</h2>
         <form onSubmit={handleRegister}>
