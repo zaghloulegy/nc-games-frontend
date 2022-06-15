@@ -60,7 +60,7 @@ export default function ReviewPage() {
         <p>Loading...</p>
       ) : (
         <section className="singlereview">
-          {/* --------------- REVIEW BLOCK --------------- */}
+         
           <div className="singlereview--body">
             <img src={img} alt=" game review" />
             <h2>{title}</h2>
@@ -74,7 +74,7 @@ export default function ReviewPage() {
             </button>
           </div>
 
-          {/*---------------  COMMENT BLOCK --------------- */}
+          
           <div className="comments">
             <CommentSection
               setNewComment={setNewComment}

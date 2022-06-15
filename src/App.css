@@ -1,7 +1,3 @@
-body {
-  background: #dbc6c6;
-}
-
 .header {
   text-transform: uppercase;
   background-color: black;
@@ -226,7 +222,12 @@ h3:hover {
   font-size: 1rem;
   padding: 1rem;
   padding-inline: 2rem;
-  color: var(--yellow);
+  color: white;
+  font-size: larger;
+  font-weight: 600;
+}
+.login form button:hover {
+  background-color: rgb(105, 129, 196);
 }
 
 .error {
@@ -251,15 +252,16 @@ footer {
 }
 
 footer a {
-  color: var(--yellow);
+  color: whitesmoke;
 }
 
-/* BREAKPOINT 1: eg. iPhone 6+ */
+
 @media (min-width: 414px) {
 }
-/* BREAKPOINT 2: eg. iPad mini */
+
 @media (min-width: 703px) {
-  body {
-    padding: 5rem;
-  }
+body{
+  margin:  0.9rem;
+  padding: 0.9rem;
+}
 }
