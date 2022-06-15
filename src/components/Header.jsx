@@ -24,12 +24,14 @@ export default function Header() {
     <div>
       <Link to="/">
         <div className="header">
+          <h1 className="header__title"> Z</h1>
           <img
             className="header__logo"
             src={northercoders}
             alt="northercoders logo"
           />
-          <h1 className="header__title">Zaghloul`s Game</h1>
+
+          <h1 className="header__title">ghloul`s Game</h1>
         </div>
       </Link>
       <div>
