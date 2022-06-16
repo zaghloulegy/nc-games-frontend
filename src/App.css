@@ -317,6 +317,8 @@ footer a {
   border: 10px solid black;
   position: center;
   transform: scale(0.5);
+  display:inline-block;
+
 }
 
 
@@ -337,10 +339,15 @@ footer a {
   font-weight: bold;
   text-align: center;
   padding-bottom: 1rem;
+
 }
 
 
 @media (min-width: 414px) {
+  body{
+    font-size: 1.5rem;
+    
+  }
 }
 
 @media (min-width: 703px) {
