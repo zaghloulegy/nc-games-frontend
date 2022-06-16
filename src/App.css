@@ -12,10 +12,11 @@
 }
 
 .header img {
-  max-width: 100px;
-  min-width: 38px;
-  width: 10%;
-  text-align: center;
+  width: 20vh;
+  height: 20vh;
+  padding: 2rem;
+  margin-inline: -3rem;
+
 }
 .header__title {
   color: white;
