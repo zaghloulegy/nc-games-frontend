@@ -4,6 +4,8 @@ import { UserContext } from "../contexts/UserContext";
 import { fetchUser} from "../utils/api";
 import { getFirstName } from "../utils/utilFuncs";
 
+import "../App.css"
+
 export default function Dashboard() {
   const {
     currentUser: { name, avatar_url },
@@ -32,9 +34,9 @@ export default function Dashboard() {
         <div>
           <h2>Hello, {getFirstName(name)}!</h2>
           <div>
-            <h3>Account</h3>
-            <img src={avatar_url} alt="user avatar" width="10%" />
-            <p>Username: {currentUser.username}</p>
+            <h3 className="dashboard__header">Account</h3>
+            <img src={avatar_url} alt="user avatar" className="profile__photo" />
+            <p className="username__font">Username: {currentUser.username}</p>
           </div>
         </div>
       )}

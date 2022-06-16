@@ -1,23 +1,16 @@
-
-
 import { getUsers, getUserInfo } from "../utils/api";
 import { useUsers } from "../hooks/useApi";
 import {useContext} from "react";
 import {UserContext} from "../contexts/UserContext";
+import "../App.css"
 
-
-function RequireLogin({ children }) {
+function RequireLogin() {
   const { usersWithInfo, usersLoading } = useUsers(getUsers, getUserInfo);
-  // console.log(props);
-
-  const {setCurrentUser, currentUser} = useContext(UserContext);
-  
-  // console.log(setCurrentUser);
-  // if (currentUser) return children;
+  const {setCurrentUser} = useContext(UserContext);
   if (usersLoading) return <p>Loading ...</p>;
   return (
     <div id="require-login">
-      <h1>Please Select a User to log in as!</h1>
+      <h1>Please Select Your User</h1>
       <ul>
         {usersWithInfo.map((user) => {
           return (
@@ -26,7 +19,7 @@ function RequireLogin({ children }) {
               onClick={() => setCurrentUser(user.user)}
             >
               <p>{user.user.username}</p>
-              <img src={user.user.avatar_url} alt="" />
+              <img src={user.user.avatar_url} alt="profile" />
             </li>
           );
         })}
