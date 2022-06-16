@@ -310,24 +310,20 @@ footer a {
 
 
 .profile__photo_img{
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  border-radius: 30%;
+  width: 30vh;
+  height: 25ch;
+  border-radius: 20% 10% 20% 10%;
   border: 10px solid black;
-  position: center;
-  transform: scale(0.5);
-  display:inline-block;
-
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 
-.profile__photo img{
-  width: 100%;
-  height: 100%;
-  scale: contain;
-  position: relative;
+.profile__photo_img:hover{
+  border: 10px solid rgb(196, 105, 105);
 }
+
 
 
 
