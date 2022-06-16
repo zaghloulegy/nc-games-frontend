@@ -35,7 +35,11 @@ export default function Dashboard() {
           <h2>Hello, {getFirstName(name)}!</h2>
           <div>
             <h3 className="dashboard__header">Account</h3>
-            <img src={avatar_url} alt="user avatar" className="profile__photo" />
+            <img
+              src={avatar_url}
+              alt="user avatar"
+              className="profile__photo_img"
+            />
             <p className="username__font">Username: {currentUser.username}</p>
           </div>
         </div>
