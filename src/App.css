@@ -337,12 +337,15 @@ footer a {
 
 }
 
+/* look here */
 
 @media (min-width: 414px) {
-  body{
-    font-size: 1.5rem;
-    
-  }
+  .header img {
+  width: 100px;
+  height: 100px;
+  margin-top: -2rem;
+}
+  
 }
 
 @media (min-width: 703px) {
