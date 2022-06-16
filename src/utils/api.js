@@ -72,3 +72,17 @@ export const postUser = (username, fullName) => {
 };
 
 
+export const getUsers = async () => {
+  const { data } = await gameApi.get("/users");
+  return data;
+};
+
+export const getUserInfo = async (username) => {
+  const { data } = await gameApi.get(`/users/${username}`);
+  return data;
+};
+
+export const getDefaultUser = async () => {
+  const { data } = await gameApi.get("/users/happyamy2016");
+  return data;
+};
