@@ -2,7 +2,7 @@ import { React, useContext } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { UserContext } from "../contexts/UserContext";
 import { getFirstName } from "../utils/utilFuncs";
-import SearchBox from "./SearchBox";
+import SearchBox from "./sorting";
 import northercoders from "../img/northercoders.png";
 
 export default function Header() {
