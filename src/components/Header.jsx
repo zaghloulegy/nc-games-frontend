@@ -31,7 +31,7 @@ export default function Header() {
             alt="northercoders logo"
           />
 
-          <h1 className="header__title">ghloul`s Game</h1>
+          <h1 className="header__title">ghloul's Game</h1>
         </div>
       </Link>
       <div>

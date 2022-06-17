@@ -9,13 +9,15 @@
   flex-flow: row nowrap;
   column-gap: 0.8rem;
   justify-content: center;
+ 
 }
 
 .header img {
-  width: 20vh;
-  height: 20vh;
-  padding: 2rem;
-  margin-inline: -3rem;
+  width: 7%;
+  height: 7%; 
+  margin-right: -0.5rem;
+  margin-left: -0.5rem;
+  padding-top: 0.6rem;
 
 }
 .header__title {
@@ -271,12 +273,31 @@ footer a {
   margin: 0;
   display: inline-block;
   cursor: pointer;
+  font-weight: bold;
+  margin: 1rem;
+  font-weight: bolder;
 }
+
+#require-login p {
+  font-weight: bolder;
+  margin-bottom: 0.5rem;
+}
+
+
+
+#require-login li:hover {
+  color: rgb(206, 93, 17);
+  
+}
+
 #require-login {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
+  
 }
+
+
 
 #require-login ul {
   display: flex;
@@ -295,6 +316,12 @@ footer a {
   margin: 0 40px;
   border: 2px solid black;
 }
+
+#require-login img:hover {
+  border: 5px solid rgb(206, 93, 17);
+}
+
+
 
 .dashboard__header{
   text-align: center;
@@ -318,6 +345,7 @@ footer a {
   display: block;
   margin-left: auto;
   margin-right: auto;
+  
 }
 
 
@@ -335,17 +363,6 @@ footer a {
   text-align: center;
   padding-bottom: 1rem;
 
-}
-
-/* look here */
-
-@media (min-width: 414px) {
-  .header img {
-  width: 100px;
-  height: 100px;
-  margin-top: -2rem;
-}
-  
 }
 
 @media (min-width: 703px) {
