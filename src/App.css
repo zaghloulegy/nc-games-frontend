@@ -96,6 +96,7 @@ form button {
 h2 {
   text-align: center;
   margin-top: 6rem;
+  color: beige;
 }
 
 .reviews {
@@ -111,7 +112,7 @@ h2 {
   margin-bottom: 1rem;
   box-shadow: 0.05rem 0.1rem 0.3rem -0.03rem rgba(0, 0, 0, 0.9);
   border-radius: 0.5rem;
-  background-color: rgb(201, 140, 140);
+  background-image: radial-gradient(circle at center, rgb(155, 101, 101) 0%, rgb(141, 30, 30) 100%);
   display: grid;
   grid-template-columns: 1fr  1fr 1fr 1fr;
  
@@ -127,17 +128,19 @@ h2 {
   width: 100%;
   font-size: larger;
   font-weight: bold;
+  color: white;
 }
 
 
 .reviews__reviewcard a {
 
-  border: 3px solid black;
-  color: #000;
+  border: 3px solid rgb(8, 8, 8);
+  color: rgb(255, 255, 255);
   padding: 15px 32px;
   text-align: center;
   display: inline-block;
   border-radius: 40%;
+  background-image: radial-gradient(circle at center, rgb(163, 28, 28) 0%, rgb(8, 8, 8) 100%);
 }
 
 
@@ -323,8 +326,7 @@ footer a {
 
 
 #require-login li:hover {
-  color: rgb(206, 93, 17);
-  
+color: yellowgreen;  
 }
 
 #require-login {
@@ -351,11 +353,11 @@ footer a {
   height: 200px;
   border-radius: 50%;
   margin: 0 40px;
-  border: 2px solid black;
+  border: 10px solid black;
 }
 
 #require-login img:hover {
-  border: 5px solid rgb(206, 93, 17);
+  border: 20px solid rgb(17, 121, 206);
 }
 
 
