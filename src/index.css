@@ -14,7 +14,7 @@
 body {
   margin: 0;
   padding: 0;
-  background-image: radial-gradient(yellow, red , blue);
+  background-image: linear-gradient(to right, var(--darkest), var(--dark-blue), var(--blue), var(--light-blue), var(--yellow));
 }
 
 html,

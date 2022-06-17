@@ -66,7 +66,8 @@ li {
 
 .searchbar__sort,
 .searchbar__categories {
-  font-size: 0.8rem;
+  font-size: 0.9rem;
+  font-weight: bold;
 }
 
 .searchbar__button,
@@ -112,7 +113,7 @@ h2 {
   margin-bottom: 1rem;
   box-shadow: 0.05rem 0.1rem 0.3rem -0.03rem rgba(0, 0, 0, 0.9);
   border-radius: 0.5rem;
-  background-image: radial-gradient(circle at center, rgb(155, 101, 101) 0%, rgb(141, 30, 30) 100%);
+  background-image: radial-gradient(circle at center, rgb(70, 8, 49) 0%, rgb(199, 101, 166) 0%, rgb(141, 30, 30) 100%);
   display: grid;
   grid-template-columns: 1fr  1fr 1fr 1fr;
  
@@ -140,7 +141,7 @@ h2 {
   text-align: center;
   display: inline-block;
   border-radius: 40%;
-  background-image: radial-gradient(circle at center, rgb(163, 28, 28) 0%, rgb(8, 8, 8) 100%);
+  background-image: radial-gradient(circle at center, rgb(243, 76, 104) 0%, rgb(88, 24, 24) 100%);
 }
 
 
@@ -389,7 +390,7 @@ color: yellowgreen;
 
 
 .profile__photo_img:hover{
-  border: 10px solid rgb(196, 105, 105);
+  border: 10px solid rgb(105, 196, 176);
 }
 
 
