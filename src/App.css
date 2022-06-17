@@ -158,7 +158,7 @@ h2 {
 
 .reviews__stats,
 h3 {
-  color: black;
+  color: rgb(255, 255, 255);
   font-size: 1.5rem;
   padding-left: 1rem;
   padding-right: 1rem;
@@ -204,6 +204,8 @@ h3:hover {
   padding-top: 1rem;
   padding-bottom: 1rem;
   line-height: 1.5;
+  color: aliceblue;
+  font-size: 1.5rem;
 }
 
 .singlereview__body button,
@@ -229,7 +231,8 @@ h3:hover {
 .comments__card h4 {
   padding-top: 0.5rem;
   font-weight: 600;
-  color: var(__light-blue);
+  color: white;
+  font-size: 1.5rem;
 }
 
 .comments__card p {
@@ -237,6 +240,14 @@ h3:hover {
   line-height: 1.5;
   word-break: break-all;
   white-space: normal;
+  color: aliceblue;
+  font-size: 1.5rem;
+}
+
+.login__link{
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
 }
 
 .comments__input form textarea {
@@ -307,6 +318,7 @@ footer a {
 
 #require-login h1 {
   text-align: center;
+  color: antiquewhite;
 }
 
 #require-login li {
@@ -322,6 +334,7 @@ footer a {
 #require-login p {
   font-weight: bolder;
   margin-bottom: 0.5rem;
+  color: antiquewhite;
 }
 
 
@@ -358,7 +371,7 @@ color: yellowgreen;
 }
 
 #require-login img:hover {
-  border: 20px solid rgb(17, 121, 206);
+  border: 20px solid rgb(53, 133, 16);
 }
 
 
@@ -390,7 +403,7 @@ color: yellowgreen;
 
 
 .profile__photo_img:hover{
-  border: 10px solid rgb(105, 196, 176);
+  border: 10px solid rgb(58, 151, 21);
 }
 
 
@@ -402,6 +415,7 @@ color: yellowgreen;
   font-weight: bold;
   text-align: center;
   padding-bottom: 1rem;
+  color: antiquewhite;
 
 }
 

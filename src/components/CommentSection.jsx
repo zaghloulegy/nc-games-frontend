@@ -77,8 +77,8 @@ export default function CommentSection({
       <h3>Leave a Comment</h3>
       <div className="comments__input">
         {!username ? (
-          <p>
-            Please <Link to="/login">login</Link> or{" "}
+          <p className="login__link">
+            Please <Link to="/login">Login</Link> {" "}
           </p>
         ) : (
           <form onSubmit={handleSubmit}>
