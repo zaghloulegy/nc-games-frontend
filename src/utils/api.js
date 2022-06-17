@@ -81,8 +81,3 @@ export const getUserInfo = async (username) => {
   const { data } = await gameApi.get(`/users/${username}`);
   return data;
 };
-
-export const getDefaultUser = async () => {
-  const { data } = await gameApi.get("/users/happyamy2016");
-  return data;
-};
